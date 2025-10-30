@@ -8,7 +8,7 @@
 2. Install the required libraries by running:
     - `pip3 install -r requirements.txt`
 3. Run the script using:
-    - `export APP_CONFIG=/Users/hlee/git/careflow/python-server/app/config/config.yaml;python3 main.py`
+    - `python3 main.py`
 
 
 Call the script with the following command as example

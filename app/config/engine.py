@@ -4,8 +4,9 @@ import sys
 import munch
 import yaml
 import yamale
-import pkg_resources
 from yamale.yamale_error import YamaleError
+from importlib.resources import files
+
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger('flowops')
 
@@ -28,7 +29,7 @@ if not os.path.exists(config_filename):
     sys.exit(1)
 
 # Validate the configuration against the predefined schema
-schema_filename = pkg_resources.resource_filename('app.config', 'schema.yaml')
+schema_filename = str(files('app.config') / 'schema.yaml')
 config_schema = yamale.make_schema(schema_filename)
 config_data = yamale.make_data(config_filename)
 try:
