@@ -1,0 +1,8 @@
+
+# info, debug
+LOG_LEVEL: str()
+
+server:
+  HOST: str()
+  PORT: int()
+  ROUTE: str()

@@ -1,0 +1,6 @@
+LOG_LEVEL: 'debug'
+
+server:
+  HOST: '0.0.0.0'
+  PORT: 5001
+  ROUTE: '/api'
